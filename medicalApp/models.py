@@ -11,6 +11,12 @@ class Company(models.Model):
     description = models.CharField(max_length=255)
     added_on = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        verbose_name_plural = "Companies"
+
+    def __str__(self):
+        return self.name
+
 
 class Medicine(models.Model):
     name = models.CharField(max_length=255)
